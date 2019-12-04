@@ -57,7 +57,7 @@
   height: 90px
   background: $green-light-color
   z-index: 0
-  opacity: 88%
+  opacity: 0.88
   transition: .5s
   
 .item__name
@@ -122,6 +122,7 @@
   color: $white-color
   transition: .2s
   text-decoration: none
+  cursor: default
 
 .item__checkbox:checked ~ .item__plus-btn
   .plus-btn__line
@@ -132,15 +133,16 @@
   transition: .5s
 
 .item__checkbox:checked ~ .item__description
-  opacity: 100%
+  opacity: 1
   transition: .4s
 
 .item__checkbox:checked ~ .item__title
-  opacity: 90%
+  opacity: 0.9
   transition: .4s
 
 .item__checkbox:checked ~ .item__link-btn
-  opacity: 100%
+  cursor: pointer
+  opacity: 1
   transition: .4s
 
 .item__checkbox:checked ~ .item__link-btn:hover
