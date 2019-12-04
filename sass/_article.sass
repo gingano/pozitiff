@@ -1,8 +1,7 @@
 @import "variables"
 
 .article
-  margin: 0 auto
-  max-width: 1110px
+  width: 100%
   display: flex
   flex-wrap: wrap
   justify-content: center
@@ -11,10 +10,9 @@
   display: flex
   flex-direction: column
   align-items: center
-  max-width: 555px
-  width: 100%
-  height: 476px
-  background: #F6F9FC
+  width: $desktop-item-width
+  height: $desktop-item-height
+  background: $grey-color
 
 .item__bg
   position: absolute
@@ -25,7 +23,7 @@
   height: 0
 
 .item__plus-btn:hover
-  background: #BADA6A
+  background: $green-light-color
   cursor: pointer
 
 .item__plus-btn
@@ -34,7 +32,7 @@
   display: block
   width: 90px
   height: 90px
-  background: #A6CC45
+  background: $green-color
   z-index: 1
   transition: .5s
 
@@ -45,7 +43,7 @@
     display: block
     width: 5px
     height: 25px
-    background: #fff
+    background: $white-color
     transition: .5s
 
   .plus-btn__line:nth-child(2)
@@ -57,7 +55,7 @@
   align-self: flex-start
   width: 90px
   height: 90px
-  background: #BADA6A
+  background: $green-light-color
   z-index: 0
   opacity: 88%
   transition: .5s
@@ -72,7 +70,7 @@
   line-height: 22px
   letter-spacing: 0.03em
   z-index: 1
-  color: #466D8A
+  color: $blue-dark-color
   transition: .5s
 
 .item__description
@@ -86,7 +84,7 @@
   line-height: 21px
   text-align: right
   z-index: 1
-  color: #fff
+  color: $white-color
   transition: .2s
 
 .item__title
@@ -100,7 +98,7 @@
   line-height: 57px
   text-align: center
   z-index: 1
-  color: #fff
+  color: $white-color
   transition: .2s
 
 .item__link-btn
@@ -118,10 +116,10 @@
   width: 240px
   height: 48px
   box-sizing: border-box
-  border: 2px solid #FFFFFF
+  border: 2px solid $white-color
   padding: 11px 0 11px 0
   border-radius: 5px
-  color: #fff
+  color: $white-color
   transition: .2s
   text-decoration: none
 
@@ -130,7 +128,7 @@
     transform: rotate(90deg)
 
 .item__checkbox:checked ~ .item__name
-  color: white
+  color: $white-color
   transition: .5s
 
 .item__checkbox:checked ~ .item__description
@@ -146,12 +144,12 @@
   transition: .4s
 
 .item__checkbox:checked ~ .item__link-btn:hover
-  background: #fff
-  color: #BADA6A
+  background: $white-color
+  color: $green-light-color
 
 .item__checkbox:checked ~ .item__checked-bg
-  width: 555px
-  height: 476px
+  width: $desktop-item-width
+  height: $desktop-item-height
 
 .item__checkbox:checked ~ .item__plus-btn
   background: none
@@ -161,42 +159,33 @@
   .article
     flex-direction: column
     justify-content: center
-    max-width: 555px
-
-  .article__item
-    display: flex
-    flex-direction: column
-    align-items: center
-    max-width: 555px
     width: 100%
-    height: 476px
-    background: #F6F9FC
 
 @media (max-width: 600px)
   .article
-    width: 380px
+    width: $mobile-big-item-width
 
   .article__item
-    width: 380px
-    height: 500px
+    width: $mobile-big-item-width
+    height: $mobile-height
 
   .item__checkbox:checked ~ .item__checked-bg
-    width: 380px
-    height: 500px
+    width: $mobile-big-item-width
+    height: $mobile-height
 
 @media (max-width: 430px)
   .article
-    width: 337px
+    width: $mobile-small-item-width
 
   .article__item
-    width: 337px
-    height: 500px
+    width: $mobile-small-item-width
+    height: $mobile-height
 
   .item__plus-btn
-    width: 337px
+    width: $mobile-small-item-width
 
   .item__checked-bg
-    width: 337px
+    width: $mobile-small-item-width
 
   .item__name
     align-self: center
@@ -215,23 +204,23 @@
     margin: 50px 0 0 0
 
   .item__checkbox:checked ~ .item__checked-bg
-    width: 337px
-    height: 500px
+    width: $mobile-small-item-width
+    height: $mobile-height
 
 @media (max-width: 340px)
   .article
-    width: 300px
+    width: $mobile-extra-small-item-width
 
   .article__item
-    width: 300px
-    height: 500px
+    width: $mobile-extra-small-item-width
+    height: $mobile-height
 
   .item__plus-btn
-    width: 300px
+    width: $mobile-extra-small-item-width
 
   .item__checked-bg
-    width: 300px
+    width: $mobile-extra-small-item-width
 
   .item__checkbox:checked ~ .item__checked-bg
-    width: 300px
-    height: 500px
+    width: $mobile-extra-small-item-width
+    height: $mobile-height
