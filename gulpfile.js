@@ -8,7 +8,7 @@ let browserSync = require('browser-sync').create();
 let ghPages = require('gulp-gh-pages');
 
 function style () {
-  return gulp.src('./sass/*.sass')
+  return gulp.src('./sass/*.scss')
     .pipe(sass())
     .pipe(autoprefixer({cascade: false}))
     .pipe(gulp.dest('./dist/css'))
@@ -21,13 +21,13 @@ function watch () {
       baseDir: './dist'
     }
   });
-  gulp.watch('./sass/*.sass', style);
+  gulp.watch('./sass/*.scss', style);
   gulp.watch('./dist/js/*js').on('change', browserSync.reload);
   gulp.watch('./dist/*.html').on('change', browserSync.reload);
 }
 
 function build () {
-  return gulp.src('./sass/*.sass')
+  return gulp.src('./sass/*.scss')
     .pipe(sass())
     .pipe(autoprefixer({cascade: false}))
     .pipe(cleanCSS({compatibility: 'ie8'}))

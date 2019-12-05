@@ -1,0 +1,33 @@
+@import "abstracts/variables";
+@import "layout/header";
+@import "components/modal";
+@import "layout/article";
+@import "layout/footer";
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+  cursor: default;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: $desktop-item-width;
+  }
+}
+
+@media (max-width: 600px) {
+  .container{
+    width: $mobile-big-item-width;
+  }
+}
+@media (max-width: 430px) {
+  .container{
+    width: $mobile-small-item-width;
+  }
+}
+@media (max-width: 340px){
+  .container{
+    width: $mobile-extra-small-item-width;
+  }
+}
